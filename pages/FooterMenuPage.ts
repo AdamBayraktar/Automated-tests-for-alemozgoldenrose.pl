@@ -24,4 +24,29 @@ export class FooterMenuPage{
     // social media icons
     readonly facebookIcon: Locator
     readonly InstagramIcon: Locator
+
+    constructor(page: Page){
+        this.page = page;
+        // subscription field
+        this.subscriptionField = page.locator("footer").
+        this.subscriptionSubmitButton = page.locator("footer").getByRole('form').getByRole('button')
+        this.promotionsLink
+        this.newProductsLink
+        this.topSellersLink
+        this.ourShopsLink
+        this.contactWithUsLink
+        this.competitionRegulationLink
+        this.siteMapLink
+        // my account
+        this.myOrdersLink
+        this.myProductReturnsLink
+        this.myBillsLink
+        this.myAddressesLink
+        this.myPersonalInformationLink
+        this.myCouponsLink
+        // social media icons
+        this.facebookIcon
+        this.InstagramIcon
+
+    }
 }
