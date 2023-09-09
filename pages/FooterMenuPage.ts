@@ -28,25 +28,24 @@ export class FooterMenuPage{
     constructor(page: Page){
         this.page = page;
         // subscription field
-        this.subscriptionField = page.locator("footer").
-        this.subscriptionSubmitButton = page.locator("footer").getByRole('form').getByRole('button')
-        this.promotionsLink
-        this.newProductsLink
-        this.topSellersLink
-        this.ourShopsLink
-        this.contactWithUsLink
-        this.competitionRegulationLink
-        this.siteMapLink
+        this.subscriptionField = page.locator("#newsletter-input")
+        this.subscriptionSubmitButton = page.locator("#newsletter_block_left").getByRole('button')
+        this.promotionsLink = page.locator("#footer").getByTitle('Promocje')
+        this.newProductsLink = page.locator("#footer").getByTitle('Nowe produkty')
+        this.topSellersLink = page.locator("#footer").getByTitle('Top sellers')
+        this.ourShopsLink = page.locator("#footer").getByTitle('Nasze sklepy')
+        this.contactWithUsLink = page.locator("#footer").getByTitle('Kontakt z nami')
+        this.competitionRegulationLink = page.locator("#footer").getByTitle('Regulamin konkursu')
+        this.siteMapLink = page.locator("#footer").getByTitle('Mapa strony')
         // my account
-        this.myOrdersLink
-        this.myProductReturnsLink
-        this.myBillsLink
-        this.myAddressesLink
-        this.myPersonalInformationLink
-        this.myCouponsLink
+        this.myOrdersLink = page.locator("#footer").getByTitle('Moje zamówienia')
+        this.myProductReturnsLink = page.locator("#footer").getByTitle('Moje zwroty produktów')
+        this.myBillsLink = page.locator("#footer").getByTitle('Moje rachunki')
+        this.myAddressesLink = page.locator("#footer").getByTitle('Moje adresy')
+        this.myPersonalInformationLink = page.locator("#footer").getByTitle('Zarządzaj moimi informacjami osobistymi')
+        this.myCouponsLink = page.locator("#footer").getByTitle('Moje bony')
         // social media icons
-        this.facebookIcon
-        this.InstagramIcon
-
+        this.facebookIcon = page.locator("#social_block .facebook").getByRole('link')
+        this.InstagramIcon = page.locator("#social_block .instagram").getByRole('link')
     }
 }
