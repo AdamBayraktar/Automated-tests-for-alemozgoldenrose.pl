@@ -45,4 +45,11 @@ export class TopMenuPage{
         this.contactLink = page.locator("#header").getByRole('link', {name:"kontakt"})
     }
 
+    async signIn(login, password){
+        await this.accountLink.click()
+        await this.emailLoginField.fill(login)
+        await this.passwordLoginField.fill(password)
+        await this.loginButton.click()
+    }
+
 }
